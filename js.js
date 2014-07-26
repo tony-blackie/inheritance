@@ -21,7 +21,7 @@
         if (x) {
             return x * 2;
         }
-        else console.log("Function needs 1 argument");
+        else console.log("Function needs 1 argument, <> 0");
     };
     var b = new BClass();
 
@@ -43,7 +43,7 @@
             if (typeof x !== undefined) {
                 return  this.oldMethod(x) * 5;
             }
-            else console.log("Function needs 1 argument");
+            else console.log("Function needs 1 argument, <> 0");
         }
     }
 
