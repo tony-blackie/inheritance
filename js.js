@@ -1,4 +1,4 @@
-
+"use strict";
     /* AClass */
 
     function AClass() {
