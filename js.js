@@ -1,10 +1,8 @@
 "use strict";
     /* AClass */
 
-    function AClass() {
-        this.p1 = 1;
-    }
-
+    function AClass() {}
+    AClass.prototype.p1 = 1;
     AClass.prototype.f1 = function () {
         return 7;
     };
@@ -12,11 +10,10 @@
 
     /* BClass */
 
-    function BClass() {
-        this.p2 = "hello";
-    }
+    function BClass() {}
 
-    BClass.prototype = a;
+    BClass.prototype = new AClass();
+    BClass.prototype.p2 = "hello";
     BClass.prototype.f2 = function (x) {
         if (x) {
             return x * 2;
@@ -44,7 +41,7 @@
                 return  this.oldMethod(x) * 5;
             }
             else console.log("Function needs 1 argument, <> 0");
-        }
+        };
     }
 
     DClass.prototype = c;
